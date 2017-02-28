@@ -8,23 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		DC099ADE1E65D6B300195454 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC099ADD1E65D6B300195454 /* main.swift */; };
+		DC099AE61E65D6C100195454 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC099AE51E65D6C100195454 /* CoreBluetooth.framework */; };
+		DC099AF21E65F51F00195454 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC099AEE1E65F51F00195454 /* Result.swift */; };
+		DC099AF31E65F51F00195454 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC099AEF1E65F51F00195454 /* Socket.swift */; };
+		DC099AF41E65F51F00195454 /* TCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC099AF01E65F51F00195454 /* TCPClient.swift */; };
+		DC099AF51E65F51F00195454 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = DC099AF11E65F51F00195454 /* ytcpsocket.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DC099AD81E65D6B300195454 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DC099ADA1E65D6B300195454 /* BLEHomeKit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BLEHomeKit; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC099ADD1E65D6B300195454 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DC099AE51E65D6C100195454 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		DC099AEE1E65F51F00195454 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = SwiftSocket/Sources/Result.swift; sourceTree = SOURCE_ROOT; };
+		DC099AEF1E65F51F00195454 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Socket.swift; path = SwiftSocket/Sources/Socket.swift; sourceTree = SOURCE_ROOT; };
+		DC099AF01E65F51F00195454 /* TCPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCPClient.swift; path = SwiftSocket/Sources/TCPClient.swift; sourceTree = SOURCE_ROOT; };
+		DC099AF11E65F51F00195454 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ytcpsocket.c; path = SwiftSocket/Sources/ytcpsocket.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC099AE61E65D6C100195454 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +54,7 @@
 			children = (
 				DC099ADC1E65D6B300195454 /* BLEHomeKit */,
 				DC099ADB1E65D6B300195454 /* Products */,
+				DC099AE41E65D6C100195454 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +70,28 @@
 			isa = PBXGroup;
 			children = (
 				DC099ADD1E65D6B300195454 /* main.swift */,
+				DC099AF61E65F52300195454 /* SwiftSocket */,
 			);
 			path = BLEHomeKit;
+			sourceTree = "<group>";
+		};
+		DC099AE41E65D6C100195454 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC099AE51E65D6C100195454 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC099AF61E65F52300195454 /* SwiftSocket */ = {
+			isa = PBXGroup;
+			children = (
+				DC099AEE1E65F51F00195454 /* Result.swift */,
+				DC099AEF1E65F51F00195454 /* Socket.swift */,
+				DC099AF01E65F51F00195454 /* TCPClient.swift */,
+				DC099AF11E65F51F00195454 /* ytcpsocket.c */,
+			);
+			name = SwiftSocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +127,7 @@
 					DC099AD91E65D6B300195454 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2EU4W2BSBP;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -121,7 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC099AF41E65F51F00195454 /* TCPClient.swift in Sources */,
+				DC099AF21E65F51F00195454 /* Result.swift in Sources */,
 				DC099ADE1E65D6B300195454 /* main.swift in Sources */,
+				DC099AF31E65F51F00195454 /* Socket.swift in Sources */,
+				DC099AF51E65F51F00195454 /* ytcpsocket.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +256,12 @@
 		DC099AE21E65D6B300195454 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2EU4W2BSBP;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -228,7 +269,10 @@
 		DC099AE31E65D6B300195454 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2EU4W2BSBP;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
