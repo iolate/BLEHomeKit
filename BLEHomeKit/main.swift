@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreBluetooth
-import SwiftSocket
+import SwiftSocket // https://github.com/swiftsocket/SwiftSocket
 
 class BleAccessoryController: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     var centralManager: CBCentralManager?
@@ -88,7 +88,7 @@ class BleAccessoryController: NSObject, CBCentralManagerDelegate, CBPeripheralDe
             self.isPowered = false
         }
         
-        print("Power changed:", self.isPowered ? "true" : "false")
+        //print("Power changed:", self.isPowered ? "true" : "false")
     }
     
     func peripheralSendString(_ str: String) {
